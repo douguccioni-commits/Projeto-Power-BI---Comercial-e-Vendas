@@ -1,76 +1,82 @@
-📊 Dashboard de Vendas - Megatop
+# Dashboard Estratégico de Vendas | Megatop
 
-⚠️ ATENÇÃO: VISUALIZE O DASHBOARD ONLINE
-Para ter a melhor experiência e interagir com os dados, não baixe o arquivo. Acesse a versão publicada diretamente no navegador clicando no botão abaixo:
+## Sobre o projeto
 
-👉 CLIQUE AQUI PARA ABRIR O DASHBOARD ONLINE: https://app.powerbi.com/view?r=eyJrIjoiMTIwYjk5MjQtY2JkYy00Mzk0LWI5ZmQtMWQ1NzMxZTg2YzdmIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9 👈
-(O link acima abrirá o relatório no Power BI Service. Caso não abra, copie e cole no seu navegador).
+Desenvolvimento de uma solução de Business Intelligence voltada à análise de desempenho comercial da empresa fictícia **Megatop**, utilizando Microsoft Power BI.
 
-📝 Sobre o Projeto
-Este projeto consiste em um dashboard analítico completo de vendas, desenvolvido no Power BI. O objetivo principal é fornecer uma visão 360º do desempenho comercial da empresa (fictícia), permitindo a análise de faturamento, metas, performance de produtos, vendedores e distribuição geográfica.
+O projeto tem como objetivo consolidar informações de vendas em um ambiente analítico interativo, permitindo acompanhar indicadores de faturamento, cumprimento de metas, desempenho de produtos, produtividade de vendedores e distribuição geográfica das vendas.
 
-O projeto foi desenhado com foco em UX/UI (User Experience / User Interface), utilizando uma identidade visual personalizada para facilitar a leitura e a tomada de decisão.
+A solução foi estruturada para oferecer diferentes perspectivas do negócio, transformando dados operacionais em informações estratégicas que apoiam a análise de resultados, o monitoramento de desempenho e o processo de tomada de decisão.
 
-🚀 Funcionalidades e Visões (Páginas)
-O relatório é dividido em 3 visões principais:
+O desenvolvimento contempla desde a preparação e transformação dos dados até a modelagem dimensional, criação de indicadores analíticos e construção de uma interface visual intuitiva.
 
-Consolidado:
+## Visualização do Dashboard
 
-KPIs gerais (Faturamento total, Meta, Total de dias úteis, Máximo de unidades vendidas).
+**Acesse o relatório interativo publicado no Power BI Service:**
 
-Análise temporal do Faturamento vs. Média Móvel.
+[**ACESSAR DASHBOARD ONLINE | MEGATOP**](https://app.powerbi.com/view?r=eyJrIjoiMTIwYjk5MjQtY2JkYy00Mzk0LWI5ZmQtMWQ1NzMxZTg2YzdmIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9)
 
-Gráficos de rosca para Faturamento por Estado.
+O relatório pode ser acessado diretamente pelo navegador, permitindo a navegação entre páginas, aplicação de filtros e exploração dos indicadores sem necessidade de instalar o Power BI Desktop.
 
-Projeções e comparativos (Faturamento Anual vs. Meta).
+## Estrutura analítica do dashboard
 
-Detalhamento de Faturamento por Produto e Estado.
+O relatório está organizado em três perspectivas principais:
 
-Produtos:
+### 1. Visão Consolidada
 
-Análise aprofundada por categoria de produto (Notebook, Geladeira, Televisão, etc.).
+Apresenta uma visão geral do desempenho comercial, reunindo os principais indicadores e resultados da operação.
 
-Comparativo de Faturamento vs. Meta por Produto.
+- Faturamento total e acompanhamento de metas.
+- Total de dias úteis e máximo de unidades vendidas.
+- Evolução temporal do faturamento e análise por média móvel.
+- Distribuição do faturamento por estado.
+- Comparativo entre faturamento anual e metas estabelecidas.
+- Análise de faturamento por produto e localização geográfica.
 
-Waterfall Chart (Gráfico de Cascata) mostrando a variação do faturamento por Ano e Produto.
+### 2. Análise de Produtos
 
-Projeção de vendas por produto.
+Permite avaliar o desempenho comercial sob a perspectiva do portfólio de produtos.
 
-Vendedor:
+- Faturamento por categoria e produto.
+- Comparativo entre resultados realizados e metas.
+- Análise de variação do faturamento por ano e produto.
+- Utilização de gráficos de cascata (Waterfall Chart).
+- Projeções de vendas por produto.
 
-Ranking de performance por vendedor.
+### 3. Análise de Vendedores
 
-Faturamento e metas por vendedor ao longo do tempo.
+Apresenta indicadores de produtividade e desempenho individual da equipe comercial.
 
-Detalhamento de vendas por estado para cada vendedor.
+- Ranking de desempenho por vendedor.
+- Faturamento individual e cumprimento de metas.
+- Evolução dos resultados ao longo do tempo.
+- Comparativo entre vendedores.
+- Distribuição geográfica das vendas por estado.
 
-🛠️ Tecnologias e Técnicas Utilizadas
-Power BI Desktop: Criação de relatórios e modelagem.
+## Tecnologias e ferramentas
 
-Linguagem DAX: Criação de medidas complexas (Inteligência de Tempo, Ranking, Metas, Projeções, etc.).
+| Tecnologia | Aplicação |
+|---|---|
+| Microsoft Power BI | Desenvolvimento do dashboard e visualização analítica |
+| DAX | Criação de medidas, indicadores, rankings, metas e cálculos de inteligência temporal |
+| Power Query (M) | Extração, limpeza, tratamento e transformação dos dados |
+| Modelagem Dimensional | Estruturação dos dados seguindo o conceito de Star Schema |
+| Power BI Service | Publicação e disponibilização do relatório interativo |
+| UI/UX Design | Construção da interface, navegação e identidade visual |
 
-Power Query (M): Extração, limpeza e transformação dos dados.
+## Modelagem de dados
 
-Design de UI/UX: Criação de menus laterais customizados (sidebar), botões de navegação, tooltips personalizados e padronização de cores corporativas.
+O modelo de dados foi estruturado seguindo a abordagem **Star Schema (Esquema Estrela)**, buscando organizar as informações e estabelecer relacionamentos adequados para análises multidimensionais.
 
-🗂️ Estrutura do Modelo de Dados
-O modelo foi construído seguindo as melhores práticas de modelagem (Star Schema), contendo:
+**Tabela fato:**
+- `fatos_Vendas` — concentra os registros transacionais de vendas.
 
-Tabela Fato: fatos_Vendas
+**Tabelas dimensão:**
+- `Calendario` — estrutura temporal para análises e cálculos de inteligência de tempo.
+- `Produto` — informações e classificações dos produtos.
+- `Vendedor` — dados relacionados à equipe comercial.
+- `Estado` — informações geográficas para análise regional.
 
-Tabelas Dimensão: Calendario, Produto, Vendedor, Estado.
+**Organização das medidas:**
 
-Tabela de Medidas centralizada para organização do DAX.
-
-⚙️ Como visualizar o projeto localmente (Opcional)
-Faça o download do arquivo .pbix disponível neste repositório.
-
-Abra o arquivo utilizando o Power BI Desktop (recomenda-se a versão mais recente).
-
-Navegue pelas abas na parte inferior e utilize os filtros laterais para interagir com os dados.
-
-👤 Autor - Douglas Saraiva Uguccioni
-
-LinkedIn = https://www.linkedin.com/in/douglasuguccioni/
-
-GitHub = https://github.com/douguccioni-commits
+Foi criada uma tabela centralizada para organização das medidas DAX, facilitando a manutenção, identificação e gestão
